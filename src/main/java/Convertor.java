@@ -1,5 +1,5 @@
-public class matrixConvertor {
-    public static String convertor(String matrix, String word) {
+public class Convertor {
+    public static String convertMatrix(String matrix, String word) {
         int sizeOfMatrix = (int) Math.sqrt(matrix.length());
         if (Math.pow(sizeOfMatrix, 2) != matrix.length()) {
             return null;

@@ -2,18 +2,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Welcome! If you want to quit program then write 'q'");
         while (true) {
             System.out.print("Input a matrix: ");
-            String matrix = in.nextLine();
+            String matrix = scanner.nextLine();
             System.out.print("Input a word: ");
-            String word = in.nextLine();
+            String word = scanner.nextLine();
             if (word.equals("q") || matrix.equals("q")) {
-                in.close();
+                scanner.close();
                 break;
             }
-            if (matrixConvertor.convertor(matrix, word) != null) {
-                System.out.println(matrixConvertor.convertor(matrix, word));
+            if (Convertor.convertMatrix(matrix, word) != null) {
+                System.out.println(Convertor.convertMatrix(matrix, word));
             } else {
                 System.out.println("Not valid matrix!");
             }
